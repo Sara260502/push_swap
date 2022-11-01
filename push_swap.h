@@ -6,7 +6,7 @@
 /*   By: sarazicchieri <sarazicchieri@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/17 14:19:01 by sarazicchie       #+#    #+#             */
-/*   Updated: 2022/11/01 16:45:34 by sarazicchie      ###   ########.fr       */
+/*   Updated: 2022/11/01 17:19:09 by sarazicchie      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -78,7 +78,7 @@ void		stack_add_bottom(t_stack **stack, t_stack *new);
 int			get_stack_size(t_stack	*stack);
 
 /* Utils */
-
+void		free_table(char **table);
 void		free_stack(t_stack **stack);
 long int	ft_atoi(const char *str);
 void		ft_putstr(char *str);
@@ -86,7 +86,8 @@ int			nb_abs(int nb);
 
 /* Error */
 
-void		exit_error(t_stack **stack_a, t_stack **stack_b);
+void		exit_error(t_stack **stack_a, t_stack \
+						**stack_b, char **input_values);
 
 /* Input Check */
 

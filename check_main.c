@@ -6,7 +6,7 @@
 /*   By: sarazicchieri <sarazicchieri@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/30 17:21:49 by sarazicchie       #+#    #+#             */
-/*   Updated: 2022/11/01 16:49:18 by sarazicchie      ###   ########.fr       */
+/*   Updated: 2022/11/01 17:18:40 by sarazicchie      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,7 +56,7 @@ int	main(int ac, char **av)
 		return (0);
 	input_values = is_correct_input(av, ac);
 	if (!input_values)
-		exit_error(NULL, NULL);
+		exit_error(NULL, NULL, input_values);
 	stack_b = NULL;
 	stack_a = fill_stack_values(input_values);
 	stack_size = get_stack_size(stack_a);
@@ -64,5 +64,6 @@ int	main(int ac, char **av)
 	push_swap(&stack_a, &stack_b, stack_size);
 	free_stack(&stack_a);
 	free_stack(&stack_b);
+	free_table(input_values);
 	return (0);
 }

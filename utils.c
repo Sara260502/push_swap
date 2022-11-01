@@ -6,7 +6,7 @@
 /*   By: sarazicchieri <sarazicchieri@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/21 18:19:09 by sarazicchie       #+#    #+#             */
-/*   Updated: 2022/11/01 16:42:59 by sarazicchie      ###   ########.fr       */
+/*   Updated: 2022/11/01 17:19:51 by sarazicchie      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,13 +34,15 @@ void	free_stack(t_stack **stack)
 *   Writes "Error\n" to the standard output after freeing stack a and b.
 *	Exits with standard error code 1.
 */
-void	exit_error(t_stack **stack_a, t_stack **stack_b)
+void	exit_error(t_stack **stack_a, t_stack \
+					**stack_b, char **input_values)
 {
 	if (stack_a == NULL || *stack_a != NULL)
 		free_stack(stack_a);
 	if (stack_b == NULL || *stack_b != NULL)
 		free_stack(stack_b);
 	write(2, "Error\n", 6);
+	free_table(input_values);
 	exit (1);
 }
 

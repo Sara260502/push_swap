@@ -6,7 +6,7 @@
 /*   By: sarazicchieri <sarazicchieri@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/24 10:20:08 by sarazicchie       #+#    #+#             */
-/*   Updated: 2022/11/01 16:58:26 by sarazicchie      ###   ########.fr       */
+/*   Updated: 2022/11/01 17:21:25 by sarazicchie      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ t_stack	*fill_stack_values(char **av)
 	{
 		nb = ft_atoi(av[i]);
 		if (nb > INT_MAX || nb < INT_MIN)
-			exit_error(&stack_a, NULL);
+			exit_error(&stack_a, NULL, av);
 		if (i == 1)
 			stack_a = stack_new((int)nb);
 		else

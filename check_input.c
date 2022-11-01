@@ -6,7 +6,7 @@
 /*   By: sarazicchieri <sarazicchieri@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/30 17:15:40 by sarazicchie       #+#    #+#             */
-/*   Updated: 2022/11/01 16:57:22 by sarazicchie      ###   ########.fr       */
+/*   Updated: 2022/11/01 17:25:07 by sarazicchie      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -93,10 +93,11 @@ char	**is_correct_input(char **av, int ac)
 		nb_zeros += arg_is_zero(tmp[i]);
 		i++;
 	}
-	if (nb_zeros > 1)
+	if (nb_zeros > 1 || have_duplicates(tmp))
+	{
+		free_table(tmp);
 		return (NULL);
-	if (have_duplicates(tmp))
-		return (NULL);
+	}
 	return (tmp);
 }
 

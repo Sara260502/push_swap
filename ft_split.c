@@ -6,7 +6,7 @@
 /*   By: sarazicchieri <sarazicchieri@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/01 15:46:22 by sarazicchie       #+#    #+#             */
-/*   Updated: 2022/11/01 16:54:42 by sarazicchie      ###   ########.fr       */
+/*   Updated: 2022/11/01 17:24:46 by sarazicchie      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -79,4 +79,20 @@ char	**ft_split(char const *s, char c)
 	}
 	tab[i] = NULL;
 	return (tab);
+}
+
+void	free_table(char **table)
+{
+	int	i;
+
+	if (table)
+	{
+		i = 1;
+		while (i <= calc_matrix_len(table))
+		{
+			free(table[i]);
+			i++;
+		}
+		free(table);
+	}
 }
