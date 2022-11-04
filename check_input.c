@@ -6,7 +6,7 @@
 /*   By: sarazicchieri <sarazicchieri@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/30 17:15:40 by sarazicchie       #+#    #+#             */
-/*   Updated: 2022/11/01 17:25:07 by sarazicchie      ###   ########.fr       */
+/*   Updated: 2022/11/05 00:24:08 by sarazicchie      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -89,7 +89,10 @@ char	**is_correct_input(char **av, int ac)
 	while (tmp[i])
 	{
 		if (!arg_is_number(tmp[i]))
-			return (NULL);
+			{	
+				free_table(tmp);
+				return (NULL);
+			}
 		nb_zeros += arg_is_zero(tmp[i]);
 		i++;
 	}

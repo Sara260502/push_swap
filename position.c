@@ -6,7 +6,7 @@
 /*   By: sarazicchieri <sarazicchieri@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/29 20:59:36 by sarazicchie       #+#    #+#             */
-/*   Updated: 2022/11/01 16:47:51 by sarazicchie      ###   ########.fr       */
+/*   Updated: 2022/11/04 18:59:05 by sarazicchie      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -117,3 +117,4 @@ void	get_target_position(t_stack **a, t_stack **b)
 		tmp_b = tmp_b->next;
 	}
 }
+

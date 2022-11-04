@@ -6,7 +6,7 @@
 /*   By: sarazicchieri <sarazicchieri@student.42    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/01 15:46:22 by sarazicchie       #+#    #+#             */
-/*   Updated: 2022/11/01 17:24:46 by sarazicchie      ###   ########.fr       */
+/*   Updated: 2022/11/05 00:19:50 by sarazicchie      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -85,7 +85,7 @@ void	free_table(char **table)
 {
 	int	i;
 
-	if (table)
+	if (table && table[0][0] == 'F' && table[0][3] == '\0')
 	{
 		i = 1;
 		while (i <= calc_matrix_len(table))
